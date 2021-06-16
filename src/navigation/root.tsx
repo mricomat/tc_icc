@@ -3,7 +3,7 @@ import React from 'react';
 import { enableScreens } from 'react-native-screens';
 
 import { routeNames } from 'src/hooks/use-navigation';
-import SearchMoviesScreen from 'src/screens/SearchMoviesScreen';
+import SearchMoviesScreen from 'src/screens/searchMoviesScreen';
 import { MoviesStackParamType } from 'src/types/navigation';
 import AnimationUtils from 'src/utils/animations';
 
