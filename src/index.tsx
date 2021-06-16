@@ -5,8 +5,6 @@ const styles = StyleSheet.create({
   container: {},
 });
 
-const App = () => {
-  return <SafeAreaView style={styles.container}></SafeAreaView>;
-};
+const App = () => <SafeAreaView style={styles.container} />;
 
 export default App;
