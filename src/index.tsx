@@ -1,10 +1,31 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import React, { useEffect, useRef } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-const styles = StyleSheet.create({
-  container: {},
-});
+import { Navigator, routeNames } from 'src/hooks/use-navigation';
+import Router from 'src/navigation/root';
 
-const App = () => <SafeAreaView style={styles.container} />;
+const GlobalStack = createStackNavigator();
 
-export default App;
+const Index = (): JSX.Element => {
+  const navRef = useRef<NavigationContainerRef>(null);
+
+  useEffect(() => {
+    Navigator.initNavigator(navRef.current);
+  }, [navRef]);
+
+  const Component = (props: any) => <Router navRef={navRef} {...props} />;
+
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer ref={navRef}>
+        <GlobalStack.Navigator>
+          <GlobalStack.Screen name={routeNames.Main} component={Component} options={{ headerShown: false }} />
+        </GlobalStack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+};
+
+export default Index;
