@@ -4,4 +4,5 @@ export default {
   blueTMDB: '#032541',
   grey80: '#333333',
   grey50: '#7F7F7F',
+  grey30: '#DADADA',
 } as const;
