@@ -24,9 +24,13 @@ const getHttpCache = async () => {
 
 const getLocalStorage = <T>({ cacheLife }: { cacheLife: number }): ICache<T> => {
   const remove = async (...requestIds: string[]) => {
-    const cache = getHttpCache();
+    const cache = await getHttpCache();
     requestIds.forEach(id => delete cache[id]);
-    getLocalStorage({ cacheLife }).set(StorageKeys.httpCache, cache);
+    await set(StorageKeys.httpCache, cache);
+  };
+
+  const clear = async () => {
+    await AsyncStorage.removeItem(StorageKeys.httpCache);
   };
 
   const isExpired = async (requestId: string) => {
@@ -67,6 +71,7 @@ const getLocalStorage = <T>({ cacheLife }: { cacheLife: number }): ICache<T> => 
     get: { value: get, writable: false },
     set: { value: set, writable: false },
     has: { value: has, writable: false },
+    clear: { value: clear, writable: false },
     delete: { value: remove, writable: false },
   });
 };
