@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Input it renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 8,
+        "flex": 1,
+        "minHeight": 140,
+      },
+      Object {},
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 8,
+        "height": "100%",
+        "opacity": 0.2,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": "100%",
+        "padding": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 6,
+            "height": "100%",
+            "width": 80,
+          },
+          Object {
+            "backgroundColor": "#DADADA",
+            "margin": 10,
+            "position": "absolute",
+          },
+        ]
+      }
+    />
+    <Image
+      source={
+        Object {
+          "uri": undefined,
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 6,
+          "height": "100%",
+          "width": 80,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingHorizontal": 6,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+            "fontWeight": "600",
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 16,
+            "fontWeight": "400",
+            "marginTop": 8,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`test Input it renders correctly with title and date 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 8,
+        "flex": 1,
+        "minHeight": 140,
+      },
+      Object {},
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 8,
+        "height": "100%",
+        "opacity": 0.2,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": "100%",
+        "padding": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 6,
+            "height": "100%",
+            "width": 80,
+          },
+          Object {
+            "backgroundColor": "#DADADA",
+            "margin": 10,
+            "position": "absolute",
+          },
+        ]
+      }
+    />
+    <Image
+      source={
+        Object {
+          "uri": undefined,
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 6,
+          "height": "100%",
+          "width": 80,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingHorizontal": 6,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+            "fontWeight": "600",
+          }
+        }
+      >
+        test
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 16,
+            "fontWeight": "400",
+            "marginTop": 8,
+          }
+        }
+      >
+        titleDate
+      </Text>
+    </View>
+  </View>
+</View>
+`;
