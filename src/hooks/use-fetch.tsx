@@ -36,8 +36,7 @@ export const useFetch = <T,>(persist: boolean, cacheLife: number) => {
 
   const doFetch = async (method: Method = 'get', url: string, dataRequest: any) => {
     if (url !== '') {
-      setState({ status: ActionType.FETCHING });
-
+      setState({ status: ActionType.FETCHING, data: initialState.data });
       const requestId = Object.entries({ url, method, body: JSON.stringify(dataRequest) || '' })
         .map(([key, value]) => `${key}:${value}`)
         .join('||');
@@ -45,7 +44,6 @@ export const useFetch = <T,>(persist: boolean, cacheLife: number) => {
       if (await cache.has(requestId)) {
         const data = await cache.get(requestId);
         log(`${method} ${url} Cached`, data);
-
         setState({ status: ActionType.FETCHED, data });
       } else {
         checkResponse(
