@@ -1,6 +1,7 @@
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect, useRef } from 'react';
+import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { Navigator, routeNames } from 'src/hooks/use-navigation';
@@ -19,6 +20,7 @@ const Index = (): JSX.Element => {
 
   return (
     <SafeAreaProvider>
+      <StatusBar barStyle="light-content" />
       <NavigationContainer ref={navRef}>
         <GlobalStack.Navigator>
           <GlobalStack.Screen name={routeNames.Main} component={Component} options={{ headerShown: false }} />
